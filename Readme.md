@@ -1,3 +1,5 @@
+This is my notes and assignments for an introductory web development class.
+
 ## Elements of the Web Network
 
 * <u>Hosts</u>: computers, servers....
