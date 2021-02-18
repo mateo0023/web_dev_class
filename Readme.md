@@ -111,11 +111,11 @@ The display property is used to change how the items are displayed.
 
 * `block`: to make the element act like a block.
 * `inline`: pretty similar to `block` but with the opposite effect.
-* `flex`: used to make the items inside of it have the different flows. [see more](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* `flex`: used to make the items inside of it have the different flows. ([see more](https://css-tricks.com/snippets/css/a-guide-to-flexbox/))
 
 ## Box Model
 
-![](https://hackernoon.com/hn-images/1*2jZwpWH9XO_QllhEpyGqMA.png)
+![Box Model](https://hackernoon.com/hn-images/1*2jZwpWH9XO_QllhEpyGqMA.png)
 
 ### Padding/Margin
 
@@ -214,3 +214,14 @@ This is a menu that appears when you hover over something.
 ```
 
 This will cause the menu to appear when you place the cursor over the parent object.
+
+# JavaScript
+
+It is the only programming language natively supported on browsers.
+
+The script can be embedded with the code `<script src="file.js"></script>`. The file is only downloaded from the server when this command is run!
+
+JavaScript is a Just-in-Time (JIT) compiled language. Head [here](https://hacks.mozilla.org/2017/02/a-crash-course-in-just-in-time-jit-compilers/) for a brief intro into JIT languages.
+
+* You don't need to declare the functions before calling them.
+
