@@ -1,0 +1,27 @@
+/* Mateo Aberastury */
+
+h2.section {
+  color: blue;
+  font-family: "Comic Sans MS", "Comic Sans", sans-serif;
+}
+
+th {
+  padding: 0.7rem;
+}
+
+.bf{ font-weight: bold; }
+
+.it{ font-style: italic; }
+
+.dialog-character {
+  font-family: monospace;
+}
+
+#profession{
+  text-decoration: underline;
+  color: red;
+}
+
+#poem{
+  font-family: Verdana, sans-serif;
+}
