@@ -149,7 +149,7 @@ Padding will be inside the border while margin will be applied to the outside of
   * `left` distance to the left of the static position (move it to the right by ...)
   * `top` distance from the top (how much to move it down).
   
-* Absolute: will position the elements on the document. Will not leave space on the document flow
+* <u>**Absolute**</u>: will position the elements on the document. Will not leave space on the document flow
   
   * `z-index` the higher value will be on top of the elements with lower `z-index`.
   
@@ -225,3 +225,22 @@ JavaScript is a Just-in-Time (JIT) compiled language. Head [here](https://hacks.
 
 * You don't need to declare the functions before calling them.
 
+## Scope
+
+* `var`: it has a global scope
+* `let`: uses local scope
+* `const`: uses local scope. You can still modify the object, but you cannot reassign.
+
+## Primitive types
+
+* Boolean: 
+* Number: only *floats*
+* String: either with `'...'` or with `"..."`
+* Symbol
+* Null
+* Undefined
+
+## Other Useful Things
+
+* `document.querySelector('css_selector')` Will return the first element in the DOM that matches with the CSS Selector. *i.e.* `".className"` will return the first element with class name `"className"`
+* `DOM_OBJECT.addEventListener(event, foo)`. This can be used to add an event listener for any element in the DOM.

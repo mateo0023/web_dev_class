@@ -1,0 +1,17 @@
+#COVID-banner {
+  background: #ceb888;
+  padding: 1px;
+}
+
+#COVID-banner span {
+  margin: 0 0.25em;
+}
+
+#COVID-banner a.btn {
+  background-color: #782f40;
+  color: white;
+}
+#COVID-banner a.btn:hover {
+  background-color: white;
+  color: black;
+}

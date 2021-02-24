@@ -2,88 +2,67 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset='utf-8'>
-    <title>Assignment 1 - My first web page</title>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <meta charset='utf-8'>
+  <title>Florida State University</title>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <h2 class="section">Name</h1>
-    <h1>Homer Simpson</h1>
+  <header id="main-header">
+    <div id="colored-top" class="container">
 
-    <h2 class="section">Hometown</h1>
-    <h1 class="it">Springfield</h1>
-
-    <h2 class="section">Profession</h1>
-    <h1 id="profession">Nuclear Safety Inspector</h1>
-
-    <h2 class="section">Favorite Food</h1>
-    <strong>
-      <ul>
-        <li>Donuts</li>
-        <li>Pizza</li>
-        <li>Beer</li>
-      </ul>
-    </strong>
-
-    <h2 class="section">Top 3 craziest things</h1>
-    <ol class="bf">
-      <li>Jumped</li>
-      <li>Has a movie of himself</li>
-      <li>He's yellow</li>
-    </ol>
-
-    <h2 class="section">Image of himself</h1>
-    <img src="images/homer.jpg" alt="Homer portrait">
-
-    <h2 class="section">Links</h1>
-      <a href="landing.html">
-      <img src="./images/series-logo.jpg" width="64" height="64" alt="The Simpsons">
-      </a>
-    <p>You can also go to: <a href="https://theuselessweb.com/">TheUselessWeb.com</a></p>
-
-    <h2 class="section">Table</h1>
-    <table border="1">
-      <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Age</th>
-      </tr>
-      <tr>
-        <th>Homer</th>
-        <th>Simpson</th>
-        <th>36</th>
-      </tr>
-      <tr>
-        <th>Marge</th>
-        <th>Simpson</th>
-        <th>34</th>
-      </tr>
-      <tr>
-        <th>Bart</th>
-        <th>Simpson</th>
-        <th>10</th>
-      </tr>
-      <tr>
-        <th>Lisa</th>
-        <th>Simpson</th>
-        <th>8</th>
-      </tr>
-      <tr>
-        <th>Maggie</th>
-        <th>Simpson</th>
-        <th>1</th>
-      </tr>
-    </table>
-
-    <h2 class="section">Haiku</h1>
-    <p id="poem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
-      Molestie at elementum eu facilisis sed odio morbi quis. <br>
-      Orci ac auctor augue mauris augue neque.<br>
-      Eget magna fermentum iaculis eu non.
+    </div>
+    <div id="header-logo-container" class="container">
+      <img id="header-logo" src="images/fsu_logo.png" width="68" alt="fsu_logo">
+    </div>
+    <div class="container" id="fsu-name-container">
+      <h1>
+        <a id="fsu-name" href="#">Florida State University</a>
+      </h1>
+    </div>
+    <div id="departments-container" class="container nav-bar">
+      <div class="nav-item">
+        <a href="#">Academics</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Admissions</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Research</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Faculty</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Students</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Veterans</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Support FSU</a>
+      </div>
+    </div>
+  </header>
+  <div id="COVID-banner" class="container">
+    <p>
+      <span>
+        <img src="images/fsu_logo.png" alt="ALERT" height="20">
+      </span>
+      <span>
+        <a href="#" class="btn">Coronavirus Alerts</a>
+      </span>
+      <span>
+        <a href="#" class="btn">Schedule Your COVID-19 Test</a>
+      </span>
+      <span>
+        <img src="images/fsu_logo.png" alt="ALERT" height="20">
+      </span>
     </p>
-
-
+  </div>
 </body>
+
 </html>
