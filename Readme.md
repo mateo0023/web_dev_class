@@ -219,13 +219,15 @@ This will cause the menu to appear when you place the cursor over the parent obj
 
 It is the only programming language natively supported on browsers.
 
-The script can be embedded with the code `<script src="file.js"></script>`. The file is only downloaded from the server when this command is run!
+The script can be embedded with the code `<script src="file.js" defer></script>`. The file is only downloaded from the server when this command is run!
+
+* **defer** makes it so that the JS Code is run after the DOM is loaded.
 
 JavaScript is a Just-in-Time (JIT) compiled language. Head [here](https://hacks.mozilla.org/2017/02/a-crash-course-in-just-in-time-jit-compilers/) for a brief intro into JIT languages.
 
 * You don't need to declare the functions before calling them.
 
-## Scope
+## Scope & Variabes
 
 * `var`: it has a global scope
 * `let`: uses local scope
@@ -239,6 +241,50 @@ JavaScript is a Just-in-Time (JIT) compiled language. Head [here](https://hacks.
 * Symbol
 * Null
 * Undefined
+
+## Accessing the DOM elements
+
+You can access any property of a DOM object by just typing the name of the attribute:
+
+`image.src` is the value of the `src` attribute of the DOM element.
+
+### Class
+
+Class is a special attribute, you have a `.classList` where you can `add` and `remove` values.
+
+```javascript
+{
+	// Gets the first element with ID 'my-image'
+    const img = document.querySelector("#my-image");
+
+    // Will add the class attribute 'active' to the element
+    img.classList.add("active");
+
+    // Will remove the class attribute 'hidden' from the element
+    img.classList.remove("hidden");
+} // img gets deleted
+```
+
+#### Methods
+
+* `add`
+
+* `remove`
+
+* `contains`
+
+* `toggle`: will add or remove the passed attribute accordingly. Basically:
+
+  ```javascript
+  function toggle(self, x){
+      if(self.contains(x))
+          self.remove(x);
+      else
+          self.add(x);
+  }
+  ```
+
+  
 
 ## Other Useful Things
 
