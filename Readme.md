@@ -227,7 +227,7 @@ JavaScript is a Just-in-Time (JIT) compiled language. Head [here](https://hacks.
 
 * You don't need to declare the functions before calling them.
 
-## Scope & Variabes
+## Scope & Variables
 
 * `var`: it has a global scope
 * `let`: uses local scope
@@ -284,7 +284,27 @@ Class is a special attribute, you have a `.classList` where you can `add` and `r
   }
   ```
 
-  
+
+## Parse
+
+Instead of just specifying the data type of the data you want to cast it to, use `parseInt` or something else.
+
+## Template Strings
+
+```javascript
+let a = 2;
+let b = 3;
+
+`The variable a has a value of ${a}.`
+// The variable a has a value of 2.
+
+`a + b = ...
+${a} + ${b} = ${a + b}`
+// a + b = ...
+// 2 + 3 = 5
+```
+
+
 
 ## Other Useful Things
 
