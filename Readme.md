@@ -262,8 +262,10 @@ ${a} + ${b} = ${a + b}`
 // 2 + 3 = 5
 ```
 
-
 ## Accessing the DOM elements
+
+* `document.querySelector(CSS_selctor)` returns the first occurrence.
+* `document.querySelectorAll(CSS_selctor)` returns a list of all occurrences.
 
 You can access any property of a DOM object by just typing the name of the attribute:
 
@@ -271,7 +273,7 @@ You can access any property of a DOM object by just typing the name of the attri
 
 ### Class
 
-Class is a special attribute, you have a `.classList` where you can `add` and `remove` values.
+Class is a special attribute, you have a `.classList` where you can `add` and `remove` values. This is changing the CSS Styles, class are not attributes, but CSS Rules.
 
 ```javascript
 {
@@ -305,9 +307,91 @@ Class is a special attribute, you have a `.classList` where you can `add` and `r
   }
   ```
 
+### Adding elements to the DOM
 
+1. Create the element using JS. This can be done with some functions like:
+
+   * `document.createElement(tag)`: this will return an element. Keep in mind, this element is not yet in the DOM.
+   * `document.createTextNode("text")`: will return a text to place inside an element (h1, p, ...)
+
+   ```javascript
+   let newP = document.createElement('p')
+   let newP_text = document.createTextNode("Here comes the sun...")
+   newP.appendChild(newP_text)
+   ```
+
+   
+
+2. Add the element to the DOM by inserting it into a DOM element.
+
+   * `el.appendChild(newP)`: will insert `newP` as the last child of `el`
+
+     ```javascript
+     let el = document.querySelector("#my-el")
+     
+     document.appendChild(newP)
+     ```
+
+   * `el.insertBefore(newP, existing)`: will insert the `newP` before the `existing` child of `el`
+
+     ```javascript
+     let el = document.querySelector("#my-el")
+     let existing = document.querySelector("#my-el p")
+     
+     document.insertBefore(newP, existing)
+     ```
+
+#### Removing
+
+`parent.removeChild(child)`
+
+#### Replace
+
+`parent.replaceChild(new, old)`
 
 ### Other Useful Things
 
 * `document.querySelector('css_selector')` Will return the first element in the DOM that matches with the CSS Selector. *i.e.* `".className"` will return the first element with class name `"className"`
-* `DOM_OBJECT.addEventListener(event, foo)`. This can be used to add an event listener for any element in the DOM. So that when the `event` gets triggered, the function `foo` will be called.
+* `DOM_OBJECT.addEventListener(event, handler)`. This can be used to add an event listener for any element in the DOM. So that when the `event` gets triggered, the function `handler` will be called.
+
+## Events
+
+For more information see the [intro to events](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events#adding_and_removing_event_handlers).
+
+### Add event listeners
+
+```javascript
+const btn = document.querySelector("button")
+
+btn.addEventListener('click', function (e) { ... })
+```
+
+This will call the specified function when the button is clicked and will pass the Event object.
+
+### Remove event listeners
+
+You can remove any event listener, however, you need to place a globally defined function in the `handler` argument.
+
+```javascript
+const btn = document.querySelector("button")
+
+btn.removeEventListener('click', handler);
+```
+
+Remove the `handler` function from the list of functions that get called when you click on the button. 
+
+### Some Events
+
+They are case sensitive strings.
+
+* `focus` when an element gains focus.
+* `blut` when an element loses focus.
+* `click` when an element is clicked and released.
+* [Even more](https://developer.mozilla.org/en-US/docs/Web/API/Element#events)
+
+### Event object
+
+There are [multiple subclasses](https://developer.mozilla.org/en-US/docs/Web/Events) for events with added properties, however, there are some common to all:
+
+* `self.target` is the read only DOM element that triggered the event.
+* [more here](https://developer.mozilla.org/en-US/docs/Web/API/Event#properties)
