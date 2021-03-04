@@ -227,7 +227,7 @@ JavaScript is a Just-in-Time (JIT) compiled language. Head [here](https://hacks.
 
 * You don't need to declare the functions before calling them.
 
-## Scope & Variables
+## Scoping Variables
 
 * `var`: it has a global scope
 * `let`: uses local scope
@@ -241,6 +241,27 @@ JavaScript is a Just-in-Time (JIT) compiled language. Head [here](https://hacks.
 * Symbol
 * Null
 * Undefined
+
+
+### Parse
+
+Instead of just specifying the data type of the data you want to cast it to, use `parseInt` or something else.
+
+### Template Strings
+
+```javascript
+let a = 2;
+let b = 3;
+
+`The variable a has a value of ${a}.`
+// The variable a has a value of 2.
+
+`a + b = ...
+${a} + ${b} = ${a + b}`
+// a + b = ...
+// 2 + 3 = 5
+```
+
 
 ## Accessing the DOM elements
 
@@ -285,28 +306,8 @@ Class is a special attribute, you have a `.classList` where you can `add` and `r
   ```
 
 
-## Parse
 
-Instead of just specifying the data type of the data you want to cast it to, use `parseInt` or something else.
-
-## Template Strings
-
-```javascript
-let a = 2;
-let b = 3;
-
-`The variable a has a value of ${a}.`
-// The variable a has a value of 2.
-
-`a + b = ...
-${a} + ${b} = ${a + b}`
-// a + b = ...
-// 2 + 3 = 5
-```
-
-
-
-## Other Useful Things
+### Other Useful Things
 
 * `document.querySelector('css_selector')` Will return the first element in the DOM that matches with the CSS Selector. *i.e.* `".className"` will return the first element with class name `"className"`
-* `DOM_OBJECT.addEventListener(event, foo)`. This can be used to add an event listener for any element in the DOM.
+* `DOM_OBJECT.addEventListener(event, foo)`. This can be used to add an event listener for any element in the DOM. So that when the `event` gets triggered, the function `foo` will be called.
