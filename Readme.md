@@ -113,6 +113,8 @@ The display property is used to change how the items are displayed.
 * `inline`: pretty similar to `block` but with the opposite effect.
 * `flex`: used to make the items inside of it have the different flows. ([see more](https://css-tricks.com/snippets/css/a-guide-to-flexbox/))
 
+To see which one to use, head to [float vs inlineblock vs flexbox](https://codepen.io/ooker/pen/donHc).
+
 ## Box Model
 
 ![Box Model](https://hackernoon.com/hn-images/1*2jZwpWH9XO_QllhEpyGqMA.png)

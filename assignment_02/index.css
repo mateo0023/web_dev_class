@@ -7,11 +7,45 @@
   margin: 0 0.25em;
 }
 
-#COVID-banner a.btn {
-  background-color: #782f40;
-  color: white;
+div.news-container{
+  display: flex;
+  flex-wrap: nowrap;
+  background: #f3ede1;
+  align-items: center;
+  justify-content: center;
 }
-#COVID-banner a.btn:hover {
-  background-color: white;
-  color: black;
+
+.news-container:hover{
+  cursor: pointer;
+}
+
+div.news-image-container{
+  width: 50%;
+}
+
+div.news-summary-container{
+  width: 50%;
+  padding: 1em;
+  text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  div.news-container{
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  div.news-image-container{
+    width: 100%;
+  }
+
+  div.news-summary-container{
+    width: 100%;
+  }
+}
+
+
+div.news-image-container img{
+  width: 100%;
+  height: auto;
 }
