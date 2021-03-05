@@ -8,11 +8,8 @@
 }
 
 div.news-container{
-  display: flex;
-  flex-wrap: nowrap;
   background: #f3ede1;
   align-items: center;
-  justify-content: center;
 }
 
 .news-container:hover{
@@ -31,10 +28,9 @@ div.news-summary-container{
 
 @media only screen and (max-width: 600px) {
   div.news-container{
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
   }
+
   div.news-image-container{
     width: 100%;
   }
