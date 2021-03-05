@@ -2,7 +2,6 @@
 Here goes all the styling
 that would most likely be used across all FSU websites.
 */
-
 html, body {
   width: 100%;
   margin: 0;
@@ -13,11 +12,14 @@ div.container {
   text-align: center;
 }
 
-a{
+a {
   color: inherit;
   text-decoration: none;
 }
-a:hover{cursor: pointer;}
+
+a:hover {
+  cursor: pointer;
+}
 
 div#colored-top {
   background-color: #782f40;
@@ -29,12 +31,11 @@ a#fsu-name {
   color: black;
   text-transform: uppercase;
   text-decoration: none;
-
   /* The Shadow, copy-pasted the values */
   /* I feel that having an accurate logo would make it more believable */
-	-moz-text-shadow: 0 1px 1px rgba(44,42,41,.25);
-	-webkit-text-shadow: 0 1px 1px rgba(44,42,41,.25);
-	text-shadow: 0 1px 1px rgba(44,42,41,.25);
+  -moz-text-shadow: 0 1px 1px rgba(44, 42, 41, .25);
+  -webkit-text-shadow: 0 1px 1px rgba(44, 42, 41, .25);
+  text-shadow: 0 1px 1px rgba(44, 42, 41, .25);
 }
 
 #header-logo-container {
@@ -74,7 +75,7 @@ img#header-logo {
   background-size: 16px 10px;
 }
 
-.btn{
+.btn {
   border-radius: 4px;
   padding: 0.25em .75em;
   color: inherit;
@@ -87,6 +88,7 @@ img#header-logo {
   background-color: #782f40;
   color: white;
 }
+
 .btn-red:hover {
   border: .1em solid black;
   background-color: white;
@@ -94,63 +96,82 @@ img#header-logo {
 }
 
 .btn-news {
-  border: .05em solid rgba(0,0,0, 0.1);
+  border: .05em solid rgba(0, 0, 0, 0.1);
   background-color: #dacaa6;
 }
+
 .btn-news:hover {
-  border: .05em solid rgba(0,0,0, 0.1);
+  border: .05em solid rgba(0, 0, 0, 0.1);
   background-color: #2c2a29;
   color: #dacaa6;
 }
 
-div.section{
+div.section {
   margin: auto;
   padding: 2vw;
   max-width: 100%;
 }
 
 @media (min-width: 1200px) {
-  div.section{
+  div.section {
     padding: 2vw calc((100vw - 1140px)/2);
   }
 }
 
-.section-a{ background: #f4f4f4; }
-.section-b{ background: white;   }
-.section-c{ background: #f3ede1; }
-.section-f{ background: #782f40; }
+.section-a {
+  background: #f4f4f4;
+}
 
-div.row{
+.section-b {
+  background: white;
+}
+
+.section-c {
+  background: #f3ede1;
+}
+
+.section-f {
+  background: #782f40;
+}
+
+div.row {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: flex-start;
   max-width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
-  div.row{
+  div.row {
     flex-wrap: wrap;
   }
+}
+
+.row-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  width: 100%;
 }
 
 .column {
   flex: 1 1;
   margin: 2px;
   text-align: left;
+  min-width: 150px;
 }
 
-.headline{
+.headline {
   padding: 5px;
 }
 
-.headline:hover{
+.headline:hover {
   background: white;
-	-moz-box-shadow: 0 0 5px 1px rgba(0,0,0, .15);
-	-webkit-box-shadow: 0 0 5px 1px rgba(0,0,0, .15);
-	box-shadow: 0 0 5px 1px rgba(0,0,0, .15);
+  -moz-box-shadow: 0 0 5px 1px rgba(0, 0, 0, .15);
+  -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, .15);
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, .15);
 }
 
-.headline .title{
+.headline .title {
   font-weight: bolder;
   font-size: 1.3em;
 }
@@ -160,11 +181,30 @@ div.row{
   height: auto;
 }
 
-.non-style{
-  background: blue;
-  list-style: none;
+.non-style {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-.non-style li {
-  text-decoration: none;
+/*
+I had initially done it with a border but I couldn't
+get the :hover effect that I wanted
+ */
+.non-style li a {
+  background-image: linear-gradient(to right,rgba(0,0,0,.15) 40%,rgba(255,255,255,.15) 60%);
+  background-position: 50% 100%;
+  background-repeat: repeat-x;
+  background-size: 6px 1px;
+}
+
+.non-style li a:hover{
+    background-image: linear-gradient(to right,#782f40 40%,#ceb888 60%);
+    background-position: 50% 100%;
+    background-repeat: repeat-x;
+    background-size: 6px 1px;
+}
+
+.non-style li a{
+  padding: .2em 0;
+  display: block;
 }
