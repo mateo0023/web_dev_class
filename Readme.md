@@ -141,6 +141,17 @@ Padding will be inside the border while margin will be applied to the outside of
   * solid
   * dotted
 
+### Background
+
+* `background-size` it resizes the background:
+  * `cover` stretch so that everything is covered by it.
+  * `h v` horizontal size and vertical size
+  * `contain` shrink to fit and then repeat to cover all.
+* `background-repeat`
+  * `repeat-x` repeat along the width
+  * `repeat` repeat vertically and horizontally
+* `background-image` can be either an image or a *gradient*.
+
 ## Positioning
 
 [`position`](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
