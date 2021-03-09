@@ -5,6 +5,7 @@ that would most likely be used across all FSU websites.
 html, body {
   width: 100%;
   margin: 0;
+  font-family: acumin-pro,Arial,sans-serif;
 }
 
 div.container {
@@ -51,6 +52,11 @@ img#header-logo {
   top: -34px;
 }
 
+hr {
+  border: 0;
+  border-top: 1px solid #d5d4d4;
+}
+
 .nav-bar {
   display: flex;
   flex-flow: row wrap;
@@ -76,11 +82,13 @@ img#header-logo {
 }
 
 .btn {
+  display: inline-block;
   border-radius: 4px;
   padding: 0.25em .75em;
-  line-height: 2em;
+  line-height: 1.1;
   color: inherit;
   text-decoration: none;
+  text-align: center;
   cursor: pointer;
 }
 
@@ -161,7 +169,7 @@ div.row {
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  max-width: 100%;
+  /* max-width: 100%; */
 }
 
 .flex {
@@ -264,10 +272,18 @@ ul.box li a {
   font-weight: 900;
 }
 
+.upcase {
+  text-transform: uppercase;
+}
+
 a.inline.trans {
   background-image: linear-gradient(to right, #782f40 40%, #ceb888 60%);
 }
 
 a.inline.trans:hover {
   background-size: .75em .0625em;
+}
+
+.nav-icon{
+  padding-right: 14px
 }
