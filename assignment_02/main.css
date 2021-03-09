@@ -149,8 +149,12 @@ div.section {
   background: #f3ede1;
 }
 
-.section-d {
+.section-f {
   background: #782f40;
+}
+
+.section-f * {
+  color: #fdfcfc;
 }
 
 div.row {
@@ -186,6 +190,10 @@ div.column {
 
 .trans {
   transition: all .15s ease-in-out;
+}
+
+.small {
+  font-size: .8em;
 }
 
 .headline {
@@ -252,8 +260,12 @@ ul.box li a {
   display: block;
 }
 
-a.strong {
+.strong {
   font-weight: 900;
+}
+
+a.inline.trans {
+  background-image: linear-gradient(to right, #782f40 40%, #ceb888 60%);
 }
 
 a.inline.trans:hover {
