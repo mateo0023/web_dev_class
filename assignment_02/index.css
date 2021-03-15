@@ -54,7 +54,9 @@ div.news-image-container img {
 }
 
 #news-directory {
-  min-width: 16.66666667%;
+  width: 16.66666667%;
+  min-width: 166px;
+  max-width: 100%;
 }
 
 .row#oversell {
