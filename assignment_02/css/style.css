@@ -1,0 +1,388 @@
+/*
+Here goes all the styling
+that would most likely be used across all FSU websites.
+*/
+html, body {
+  width: 100%;
+  margin: 0;
+  font-family: acumin-pro, Arial, sans-serif;
+  line-height: 1.5em;
+  font-size: 16px;
+}
+
+.container {
+  overflow: hidden;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+div#colored-top {
+  background-color: #782f40;
+  height: auto;
+  padding: 5px 2vw;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: acumin-pro-condensed, Arial, sans-serif;
+  line-height: 1.1em;
+  margin: 0;
+}
+
+h1, h3, h5 {
+  font-weight: 400;
+}
+
+h2, h4, h6 {
+  font-weight: 800;
+}
+
+h1, h2 {
+  font-size: 1.8125em;
+}
+
+h3, h4 {
+  font-size: 1.8125rem;
+}
+
+h5, h6 {
+  font-size: 0.8rem;
+}
+
+h4, h5, h6 {
+  margin-top: 14px;
+  margin-bottom: 7px
+}
+
+abbr {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  cursor: help;
+}
+
+#fsu-name {
+  font-family: "Adobe Garamond Pro", adobe-garamond-pro, "Times New Roman", times, serif;
+  font-weight: 300;
+  font-size: 2.4rem;
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  /* The Shadow, copy-pasted the values */
+  /* I feel that having an accurate logo would make it more believable */
+  -moz-text-shadow: 0 1px 1px rgba(44, 42, 41, .25);
+  -webkit-text-shadow: 0 1px 1px rgba(44, 42, 41, .25);
+  text-shadow: 0 1px 1px rgba(44, 42, 41, .25);
+}
+
+#header-logo-container {
+  height: 0;
+  overflow: visible;
+}
+
+div#fsu-name-container {
+  padding-top: 34px;
+}
+
+img#header-logo {
+  position: relative;
+  top: -34px;
+}
+
+#departments-container {
+  font-family: acumin-pro, Arial, sans-serif;
+  font-weight: 400;
+  font-size: .8em;
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #d5d4d4;
+}
+
+.light-bottom {
+  border: 0;
+  border-bottom: 1px solid #d5d4d4;
+  border-color: #f3f2f2;
+}
+
+.nav-bar {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-right {
+  float: right;
+  padding: 2px 0 2px 2px;
+  ;
+}
+
+.nav-item {
+  padding: 0.75em 1em;
+}
+
+.nav-item {
+  font: "Times New Roman";
+  font-style: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all .15s ease-in-out;
+}
+
+.nav-item:hover {
+  background-color: #161514;
+  color: white;
+  background-size: 16px 10px;
+}
+
+.nav-icon {
+  color: white;
+  padding: 4px 14px;
+  transition: all .15s ease-in-out;
+}
+
+.light-nav .nav-icon:hover {
+  color: #782f40;
+  background: #ffffff;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.25em .75em;
+  border-radius: 4px;
+  font-family: acumin-pro-condensed, Arial, sans-serif;
+  font-weight: 500;
+  color: inherit;
+  line-height: 1.1;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-full {
+  display: block;
+  padding: 0.25em .75em;
+  line-height: 1em;
+}
+
+.btn-red {
+  border: .1em solid #782f40;
+  background-color: #782f40;
+  color: white;
+}
+
+.btn-red:hover {
+  border: .1em solid black;
+  background-color: white;
+  color: #782f40;
+}
+
+.btn-white {
+  border: .05em solid #b5b5b4;
+  background-color: white;
+  color: #2c2a29;
+}
+
+.btn-white:hover {
+  border: .07em solid #b5b5b4;
+  background-color: rgba(181, 181, 180, .35);
+  color: #782f40;
+}
+
+.btn-news {
+  border: .05em solid rgba(0, 0, 0, 0.1);
+  background-color: #dacaa6;
+}
+
+.btn-news:hover {
+  border: .05em solid rgba(0, 0, 0, 0.1);
+  background-color: #2c2a29;
+  color: #dacaa6;
+}
+
+.btn-sm {
+  font-size: 0.8125em;
+}
+
+div.section {
+  margin: auto;
+  padding: 2vw;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+@media (min-width: 1200px) {
+  div.section {
+    padding: 2vw calc((100vw - 1140px)/2);
+  }
+}
+
+.section.topless-section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.section-a {
+  background: #f4f4f4;
+}
+
+.section-b {
+  background: white;
+}
+
+.section-c {
+  background: #f3ede1;
+}
+
+.section-f {
+  background: #782f40;
+}
+
+.section-f * {
+  color: #fdfcfc;
+}
+
+div.row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.flex {
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 600px) {
+  div.row {
+    flex-wrap: wrap;
+  }
+}
+
+.row-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  width: 100%;
+}
+
+div.column {
+  flex: 1 1;
+  margin: 2px auto;
+  text-align: left;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.trans {
+  transition: all .15s ease-in-out;
+}
+
+.small {
+  font-size: .81em;
+}
+
+.big {
+  font-size: 1.4em;
+}
+
+.headline {
+  padding: 5px;
+  transition: all .15s ease-in-out;
+}
+
+.headline:hover {
+  background: white;
+  -moz-box-shadow: 0 0 5px 1px rgba(0, 0, 0, .15);
+  -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, .15);
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, .15);
+}
+
+.headline .title {
+  font-weight: bolder;
+  font-size: 1.3em;
+}
+
+.column img {
+  width: 100%;
+  height: auto;
+}
+
+.non-style {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.widget-date {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #CEB888;
+  display: inline-table;
+  float: left;
+  clear: right;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  line-height: normal;
+}
+
+.widget-event-link {
+  padding-left: 60px;
+}
+
+/*
+I had initially done it with a border but I couldn't
+get the :hover effect that I wanted. So I copy-pasted
+and looked at the references and CSS-ticks.
+ */
+a.inline {
+  background-image: linear-gradient(to right,
+      rgba(0, 0, 0, .15) 40%,
+      rgba(255, 255, 255, .15) 60%);
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: .375em .0625em;
+}
+
+a.inline:hover {
+  background-image: linear-gradient(to right, #782f40 40%, #ceb888 60%);
+}
+
+ul.box li a {
+  padding: .2em 0;
+  display: block;
+  line-height: 1.77em;
+}
+
+.strong {
+  font-weight: 800;
+}
+
+.upcase {
+  text-transform: uppercase;
+}
+
+a.inline.trans {
+  background-image: linear-gradient(to right, #782f40 40%, #ceb888 60%);
+}
+
+a.inline.trans:hover {
+  background-size: .75em .0625em;
+}
+
+#footer>div>.column {
+  /* padding: 0; */
+  margin-left: 0;
+}

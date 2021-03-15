@@ -1,0 +1,139 @@
+#COVID-banner {
+  background: #ceb888;
+  padding: 1px;
+}
+
+#COVID-banner .banner-half {
+  margin: 0 0.25em;
+}
+
+#COVID-banner .fa{
+  font-size: 24px;
+}
+
+.hidden-xs{
+  padding: 0 3px;
+}
+
+div.news-container {
+  background: #f3ede1;
+  align-items: center;
+}
+
+.news-container:hover {
+  cursor: pointer;
+}
+
+div.news-image-container {
+  width: 50%;
+}
+
+div.news-summary-container {
+  width: 50%;
+  padding: 1em;
+  text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  div.news-container {
+    justify-content: center;
+  }
+
+  div.news-image-container {
+    width: 100%;
+  }
+
+  div.news-summary-container {
+    width: 100%;
+  }
+}
+
+div.news-image-container img {
+  width: 100%;
+  height: auto;
+}
+
+#news-directory {
+  width: 16.66666667%;
+  min-width: 166px;
+  max-width: 100%;
+}
+
+.row#oversell {
+  flex-wrap: wrap;
+}
+
+#oversell .column {
+  padding: 0 14px;
+}
+
+#fl-seal {
+  width: 106px;
+  max-width: 15%;
+}
+
+#preem {
+  width: 250px;
+}
+
+#crime {
+  width: 370px;
+  text-align: center;
+}
+
+#crime p {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .row#oversell {
+    display: block;
+  }
+
+  #fl-seal {
+    width: auto;
+    max-width: 300px;
+  }
+
+  #preem {
+    width: auto;
+  }
+
+  #crime {
+    width: auto;
+  }
+}
+
+#apply-btns>* {
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
+#apply-btns p {
+  margin-top: 0;
+}
+
+.row.thirds {
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
+}
+
+.row.thirds>.column {
+  min-width: 325px;
+}
+
+@media (max-width: 800px) {
+  #additional-info {
+    display: block;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#calendar {
+  font-family: "Benton Sans",Arial,sans-serif;
+}
