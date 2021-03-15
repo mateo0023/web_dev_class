@@ -6,22 +6,39 @@
 <head>
   <meta charset='utf-8'>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="images/fsu_logo.png"/>
   <title>Florida State University</title>
+  <link rel="stylesheet" type="text/css" href="https://use.typekit.net/qwg1fji.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" media="all">
   <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
   <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" media="all">
 </head>
 
 <body>
   <!-- Header -->
   <header id="main-header">
     <div id="colored-top" class="container">
-
+      <div class="section topless-section">
+        <div class="nav-bar nav-right light-nav">
+          <div class="nav-icon">
+            <a href="https://webmail.fsu.edu/">
+              <span class="fas fa-envelope"></span></a>
+          </div>
+          <div class="nav-icon">
+            <a href="#">
+              <span class="fas fa-search"></span></a>
+          </div>
+          <div class="nav-icon">
+            <a href="#directory">
+              <span class="fas fa-bars"></span></a>
+          </div>
+        </div>
+      </div>
     </div>
     <div id="header-logo-container" class="container">
       <img id="header-logo" src="images/fsu_logo.png" width="68" alt="fsu_logo">
     </div>
-    <div class="container" id="fsu-name-container">
+    <div class="container light-bottom" id="fsu-name-container">
       <h1>
         <a id="fsu-name" href="https://www.fsu.edu/">Florida State University</a>
       </h1>
@@ -222,7 +239,7 @@
       </div>
       <div class="column">
         <h5 class="upcase">Thinking About FSU? See it here!</h5>
-        <a href="https://youtu.be/nkE2rFc3kWM">
+        <a href="https://youtu.be/nkE2rFc3kWM" target="_blank" rel="noopener noreferrer">
           <img src="images/video_thumb.png">
         </a>
       </div>
@@ -310,7 +327,7 @@
 
 
   <!-- Directory -->
-  <div class="container section section-a">
+  <div id="directory" class="container section section-a">
     <div class="row-grid small">
       <div class="column">
         <h6 class="upcase">Get to Know FSU</h6>
@@ -412,7 +429,7 @@
   </div>
 
   <!-- Footer -->
-  <div class="container section section-f">
+  <div id="footer" class="container section section-f">
     <div class="row-grid">
       <div class="column">
         <p class="small">© Florida State University<br>Tallahassee, FL 32306</p>
