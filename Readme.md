@@ -6,6 +6,10 @@ This is my notes and assignments for an introductory web development class.
 * <u>Communication links</u>: Wired, wireless
 * <u>Networking Devices</u>: routers and other connecting devices
 
+1. [HTML](#HTML)
+2. [CSS](#CSS)
+3. [JavaScript](#JavaScript)
+
 # HTML
 
 ## Tags
@@ -41,6 +45,44 @@ Metadata about the website. The following tags go inside the `head` tag:
       * `name="keywords"`
       * `name="author"`
       * `<meta name="viewport" content="width=device-width, initial-scale=1.0">` It sets the width of the website to be the same as the screen and the zoom level to be 1.0.
+
+## Forms
+
+[Forms](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form) are what they sound like. For form validation, head [here](#Form validation)
+
+### [Input](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+
+They are used to get the user-input.
+
+#### They have different types (`type="..."`)
+
+* `text`
+* `email` used to get email.
+* `hidden` an element that is not shown
+* `date` used to get a date.
+  * `max` attribute has the max of the range (`max="yyyy-mm-dd"`)
+  * `min`
+* `password`
+* `submit` a button used to send the form.
+* [a lot more!](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types)
+
+#### `name`
+
+Used to send a name/value pair when submitting the form. This makes processing the data so much easier!!
+
+#### `placeholder`
+
+Used for the hint of the input attribute.
+
+#### maxlength
+
+The max number of characters.
+
+### [Select](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#input_types)
+
+Used to select an item from a drop-down menu.
+
+It has `name` and then it contains a lot of `<option>` elements.
 
 ## Other HTML Info
 
@@ -400,6 +442,7 @@ They are case sensitive strings.
 * `focus` when an element gains focus.
 * `blut` when an element loses focus.
 * `click` when an element is clicked and released.
+* `submit` when a form element is submitted.
 * [Even more](https://developer.mozilla.org/en-US/docs/Web/API/Element#events)
 
 ### Event object
@@ -408,3 +451,9 @@ There are [multiple subclasses](https://developer.mozilla.org/en-US/docs/Web/Eve
 
 * `self.target` is the read only DOM element that triggered the event.
 * [more here](https://developer.mozilla.org/en-US/docs/Web/API/Event#properties)
+
+## Form validation
+
+Head here for [HTML](#Forms)
+
+You can add an event listener to the Submit button or when the values are changed.

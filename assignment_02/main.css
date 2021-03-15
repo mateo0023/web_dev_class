@@ -5,7 +5,8 @@ that would most likely be used across all FSU websites.
 html, body {
   width: 100%;
   margin: 0;
-  font-family: acumin-pro,Arial,sans-serif;
+  font-family: acumin-pro, Arial, sans-serif;
+  line-height: 1.77em;
 }
 
 div.container {
@@ -27,8 +28,47 @@ div#colored-top {
   height: 50px;
 }
 
-a#fsu-name {
-  font: "Times New Roman";
+h1, h2, h3, h4, h5, h6 {
+  font-family: acumin-pro-condensed, Arial, sans-serif;
+  line-height: 1.1em;
+  margin: 0;
+}
+
+h1, h3, h5 {
+  font-weight: 400;
+}
+
+h2, h4, h6 {
+  font-weight: 800;
+}
+
+h1, h2 {
+  font-size: 1.8125em;
+}
+
+h3, h4 {
+  font-size: 1.8125rem;
+}
+
+h5, h6 {
+  font-size: 16px
+}
+
+h4, h5, h6 {
+  margin-top: 14px;
+  margin-bottom: 7px
+}
+
+abbr {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  cursor: help;
+}
+
+#fsu-name {
+  font-family: "Adobe Garamond Pro", adobe-garamond-pro, "Times New Roman", times, serif;
+  font-weight: 300;
+  font-size: 2.4rem;
   color: black;
   text-transform: uppercase;
   text-decoration: none;
@@ -52,6 +92,12 @@ img#header-logo {
   top: -34px;
 }
 
+#departments-container {
+  font-family: acumin-pro, Arial, sans-serif;
+  font-weight: 400;
+  font-size: .8em;
+}
+
 hr {
   border: 0;
   border-top: 1px solid #d5d4d4;
@@ -64,7 +110,6 @@ hr {
 }
 
 .nav-item {
-  flex: 0 0;
   padding: 0.75em 1em;
 }
 
@@ -83,10 +128,12 @@ hr {
 
 .btn {
   display: inline-block;
-  border-radius: 4px;
   padding: 0.25em .75em;
-  line-height: 1.1;
+  border-radius: 4px;
+  font-family: acumin-pro-condensed, Arial, sans-serif;
+  font-weight: 500;
   color: inherit;
+  line-height: 1.1;
   text-decoration: none;
   text-align: center;
   cursor: pointer;
@@ -133,6 +180,10 @@ hr {
   color: #dacaa6;
 }
 
+.btn-sm {
+  font-size: 0.8125em;
+}
+
 div.section {
   margin: auto;
   padding: 2vw;
@@ -169,7 +220,6 @@ div.row {
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  /* max-width: 100%; */
 }
 
 .flex {
@@ -201,7 +251,11 @@ div.column {
 }
 
 .small {
-  font-size: .8em;
+  font-size: .81em;
+}
+
+.big {
+  font-size: 1.4em;
 }
 
 .headline {
@@ -233,12 +287,14 @@ div.column {
 .widget-date {
   width: 40px;
   height: 40px;
-  text-align: center;
   border: 1px solid #CEB888;
-  text-transform: uppercase;
-  padding: 5px;
+  display: inline-table;
   float: left;
   clear: right;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px;
+  line-height: normal;
 }
 
 .widget-event-link {
@@ -266,10 +322,11 @@ a.inline:hover {
 ul.box li a {
   padding: .2em 0;
   display: block;
+  line-height: 1.77em;
 }
 
 .strong {
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .upcase {
@@ -284,6 +341,6 @@ a.inline.trans:hover {
   background-size: .75em .0625em;
 }
 
-.nav-icon{
+.nav-icon {
   padding-right: 14px
 }

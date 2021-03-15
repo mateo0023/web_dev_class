@@ -3,8 +3,16 @@
   padding: 1px;
 }
 
-#COVID-banner span {
+#COVID-banner .banner-half {
   margin: 0 0.25em;
+}
+
+#COVID-banner .fa{
+  font-size: 24px;
+}
+
+.hidden-xs{
+  padding: 0 3px;
 }
 
 div.news-container {
@@ -43,6 +51,10 @@ div.news-summary-container {
 div.news-image-container img {
   width: 100%;
   height: auto;
+}
+
+#news-directory {
+  min-width: 16.66666667%;
 }
 
 .row#oversell {
@@ -90,8 +102,13 @@ div.news-image-container img {
   }
 }
 
-#apply-btns {
+#apply-btns>* {
   flex-wrap: wrap;
+  margin-top: 0;
+}
+
+#apply-btns p {
+  margin-top: 0;
 }
 
 .row.thirds {
@@ -104,7 +121,17 @@ div.news-image-container img {
 }
 
 @media (max-width: 800px) {
-  #additional-info{
-      display: block;
+  #additional-info {
+    display: block;
   }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+#calendar {
+  font-family: "Benton Sans",Arial,sans-serif;
 }
