@@ -1,5 +1,9 @@
 This is my notes and assignments for an introductory web development class.
 
+# Assignments
+1. [Homer Page](https://mateo0023.github.io/web_dev_class/assignment_01)
+2. [FSU Homepage](https://mateo0023.github.io/web_dev_class/assignment_02)
+
 ## Elements of the Web Network
 
 * <u>Hosts</u>: computers, servers....
