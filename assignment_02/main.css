@@ -6,7 +6,8 @@ html, body {
   width: 100%;
   margin: 0;
   font-family: acumin-pro, Arial, sans-serif;
-  line-height: 1.77em;
+  line-height: 1.5em;
+  font-size: 16px;
 }
 
 div.container {
@@ -51,7 +52,7 @@ h3, h4 {
 }
 
 h5, h6 {
-  font-size: 16px
+  font-size: 0.8rem;
 }
 
 h4, h5, h6 {
