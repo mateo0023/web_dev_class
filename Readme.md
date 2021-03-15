@@ -1,18 +1,19 @@
 This is my notes and assignments for an introductory web development class.
 
-# Assignments
-1. [Homer Page](https://mateo0023.github.io/web_dev_class/assignment_01)
-2. [FSU Homepage](https://mateo0023.github.io/web_dev_class/assignment_02)
+## Outline
+
+1. Assignments
+   1. [Homer Page](https://mateo0023.github.io/web_dev_class/assignment_01)
+   2. [FSU Homepage](https://mateo0023.github.io/web_dev_class/assignment_02)
+2. [HTML](#HTML)
+3. [CSS](#CSS)
+4. [JavaScript](#JavaScript)
 
 ## Elements of the Web Network
 
 * <u>Hosts</u>: computers, servers....
 * <u>Communication links</u>: Wired, wireless
 * <u>Networking Devices</u>: routers and other connecting devices
-
-1. [HTML](#HTML)
-2. [CSS](#CSS)
-3. [JavaScript](#JavaScript)
 
 # HTML
 
