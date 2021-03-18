@@ -8,6 +8,7 @@ This is my notes and assignments for an introductory web development class.
 2. [HTML](#HTML)
 3. [CSS](#CSS)
 4. [JavaScript](#JavaScript)
+5. [Server/Connections](#Server/Connections)
 
 ## Elements of the Web Network
 
@@ -462,3 +463,80 @@ There are [multiple subclasses](https://developer.mozilla.org/en-US/docs/Web/Eve
 Head here for [HTML](#Forms)
 
 You can add an event listener to the Submit button or when the values are changed.
+
+# Server/Connections
+
+Since servers just listen to and execute HTTP Requests, they aren't tied to a specific programming language. They just need to be able to read the HTTP protocol requests. So it is basically: get request + data **and** move/get data accordingly.
+
+What they must do:
+
+1. Server listens for connections
+2. Server receives a connection
+3. Server starts to process the connection, but keeps listening for more at the same time
+4. Server parsers the HTTP request, and obtains the data contained in it
+5. (*sometimes*) Server uses the data to do something (e.g., search in a database)
+6. Server prepares a message body
+7. Server prepares a HTTP response, and attaches the message body to it
+8. Server sends the response to the user 
+9. Back to 1
+
+Since all of these steps are standard (except 5), there are Web Frameworks in multiple programming languages. Meaning that as a back-end developer you generally just need to implement step 5 and other processes that you might need.
+
+## HTTP Request
+
+There are two main types of requests in the HTTP protocol:
+
+1. GET Request
+2. POST Request
+3. [more](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+
+### GET Request
+
+Used to request data from a resource, usually a HTML files. The GET method is what your browser stores in the history and bookmarks (they are what we call URLs)
+
+`url/...?key=value&key=value&....`
+
+* Resource:
+
+  The first part is the resource eg: `google.com/search`
+
+* Query, *key, value pairs*
+
+  The second part (after the `?`) eg: `q=monkey`
+
+`google.com/search?q=monkey`
+
+### POST Method
+
+Used to send and update data on a server.
+
+### HTTP Response
+
+It contains:
+
+1. Status Line
+
+   `HTTP/1.1 200 OK`
+
+2. General Headers
+
+   `Date: ....`
+
+   `Connection: status`
+
+3. Response Headers
+
+   `Server: ...`
+
+   `Accept-Ranges: ...`
+
+4. Entity Headers
+
+   `Content Type: text/html`
+
+   `Content-Length: ...`
+
+   `Last-Modified: ...`
+
+5. Body/payload
+
