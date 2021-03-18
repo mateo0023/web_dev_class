@@ -299,8 +299,8 @@ JavaScript is a Just-in-Time (JIT) compiled language. Head [here](https://hacks.
 * Number: only *floats*
 * String: either with `'...'` or with `"..."`
 * Symbol
-* Null
-* Undefined
+* Null: like an empty
+* Undefined: the variable never received a value
 
 
 ### Parse
