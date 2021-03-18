@@ -105,6 +105,7 @@ img#header-logo {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 hr {
@@ -360,6 +361,38 @@ a.inline:hover {
   background-image: linear-gradient(to right, #782f40 40%, #ceb888 60%);
 }
 
+.thumbnail-cover {
+  position: relative;
+  display: inline-block;
+}
+
+.thumbnail::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right,
+      #782f40 40%,
+      #ceb888 60%);
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  background-size: 0;
+  transition: all .15s ease-in-out;
+}
+
+.thumbnail:hover::before {
+  background-size: .375em .0625em;
+  background-position: 0 calc(100% - 0.275em);
+}
+
+a.inline.trans {
+  background-image: linear-gradient(to right, #782f40 40%, #ceb888 60%);
+}
+
+a.inline.trans:hover {
+  background-size: .75em .0625em;
+}
+
 ul.box li a {
   padding: .2em 0;
   display: block;
@@ -372,14 +405,6 @@ ul.box li a {
 
 .upcase {
   text-transform: uppercase;
-}
-
-a.inline.trans {
-  background-image: linear-gradient(to right, #782f40 40%, #ceb888 60%);
-}
-
-a.inline.trans:hover {
-  background-size: .75em .0625em;
 }
 
 #footer>div>.column {
