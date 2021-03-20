@@ -1,0 +1,78 @@
+<!--############## READ ONLY  ##############-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 3</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script type="text/javascript" rel="script" src="js/scripts.js" defer></script>
+    <script type="text/javascript" rel="script" src="js/colors.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="column">
+        <div class="row">
+            <h2>Size</h2>
+            <div class="subrow">
+                <label for="height">Height (in px.)</label>
+                <input id="height" type="number" min="100" max="800" step="1" value="200"/>
+            </div>
+            <div class="subrow">
+                <label for="width">Width (in px.)</label>
+                <input id="width" type="number" min="100" max="800" step="1" value="200"/>
+            </div>
+            <div class="subrow">
+                <input id="size_btn" type="button" value="Change Size"/>
+            </div>
+        </div>
+        <div class="row">
+            <h2>Colors</h2>
+            <div class="subrow">
+                <label for="num_colors">Number of colors -(1-5)</label>
+                <input id="num_colors" type="number" min="-5" max="5" step="1" value="1"/>
+            </div>
+            <div id="colors_container" class="subrow">
+                <div class="subrow">
+                    <label for="color_sel0">Color #1</label>
+                    <input id="color_sel0" type="color" value="#ffffff"/>
+                </div>
+            </div>
+            <div class="subrow">
+                <input id="colors_btn" type="button" value="Change Colors"/>
+            </div>
+        </div>
+        <div class="row">
+            <h2>Border</h2>
+            <div class="subrow">
+                <label for="border_type">Type</label>
+                <select id="border_type">
+                    <option value="solid">Solid</option>
+                    <option value="dotted">Dotted</option>
+                    <option value="double">Double</option>
+                    <option value="dashed">Dashed</option>
+                </select>
+            </div>
+            <div class="subrow">
+                <label for="border_color">Color</label>
+                <input id="border_color" type="color" value="#000000"/>
+            </div>
+            <div class="subrow">
+                <label for="border_width">Width (in px.)</label>
+                <input id="border_width" type="number" min="1" max="10" step="1" value="1"/>
+            </div>
+            <div class="subrow">
+                <input id="border_btn" type="button" value="Change border"/>
+            </div>
+        </div>
+    </div>
+    <div id="result-container" class="column">
+        <div id="result">
+            <div class="result_row"/>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

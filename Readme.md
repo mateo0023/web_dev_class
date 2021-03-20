@@ -5,6 +5,7 @@ This is my notes and assignments for an introductory web development class.
 1. Assignments
    1. [Homer Page](https://mateo0023.github.io/web_dev_class/assignment_01)
    2. [FSU Homepage](https://mateo0023.github.io/web_dev_class/assignment_02)
+   3. [Simple Style Changes w JS](https://mateo0023.github.io/web_dev_class/assignment_03)
 2. [HTML](#HTML)
 3. [CSS](#CSS)
 4. [JavaScript](#JavaScript)
@@ -288,7 +289,7 @@ JavaScript is a Just-in-Time (JIT) compiled language. Head [here](https://hacks.
 
 * You don't need to declare the functions before calling them.
 
-## Scoping Variables
+## Variable Scopes
 
 * `var`: it has a global scope
 * `let`: uses local scope
