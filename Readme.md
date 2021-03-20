@@ -229,12 +229,12 @@ Padding will be inside the border while margin will be applied to the outside of
   It can be used to have two block elements side-by-side.
 
   ```css
-  .fl-left{
+  .fl-left {
   	width: 50%;
   	float: left;
   }
   
-  .fl-right{
+  .fl-right {
   	width: 50%;
   	float: right;
   }

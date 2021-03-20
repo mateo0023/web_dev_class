@@ -1,8 +1,5 @@
 const theDiv = document.querySelector('#result');
 
-// idk why we have that div inside there...
-theDiv.removeChild(theDiv.firstChild);
-
 const size_btn = document.querySelector("#size_btn");
 // Update size of the resulting div (theDiv)
 size_btn.addEventListener('click', function() {
@@ -11,12 +8,16 @@ size_btn.addEventListener('click', function() {
 
   theDiv.style.width = `${width}px`;
   theDiv.style.height = `${height}px`;
+
+  updateImage();
 });
 
 const colors_btn = document.querySelector("#colors_btn");
 // Set the rows to occupy the different colors inside theDiv.
 colors_btn.addEventListener('click', function() {
   let num_colors = parseInt(document.querySelector("#num_colors").value);
+  let rows = !(num_colors < 0);
+  num_colors = Math.abs(num_colors);
   let curr_colors = theDiv.childElementCount;
 
   let new_h = `${100 / num_colors}%`;
@@ -29,7 +30,17 @@ colors_btn.addEventListener('click', function() {
   // Update the existing elements.
   for (let i = 0; i < curr_colors; i++) {
     let temp = theDiv.children[i];
-    temp.style.height = new_h;
+
+    if (rows) {
+      temp.style.height = new_h;
+      temp.style.width = "100%";
+      temp.style.float = '';
+    } else {
+      temp.style.width = new_h;
+      temp.style.height = "100%";
+      temp.style.float = 'left';
+    }
+
     temp.style.backgroundColor =
       document.querySelector(`#color_sel${i}`).value;
   }
@@ -37,8 +48,16 @@ colors_btn.addEventListener('click', function() {
   // Add new elements if needed
   for (let i = curr_colors; i < num_colors; i++) {
     let temp = document.createElement("div");
+
     temp.classList.add("result_row");
-    temp.style.height = new_h;
+
+    if (rows)
+      temp.style.height = new_h;
+    else {
+      temp.style.width = new_h;
+      temp.style.float = 'left';
+    }
+
     temp.style.backgroundColor =
       document.querySelector(`#color_sel${i}`).value;
 
@@ -55,3 +74,63 @@ border_btn.addEventListener('click', function() {
 
   theDiv.style.border = `${thick}px ${style} ${color}`;
 })
+
+const add_img_btn = document.createElement("input");
+add_img_btn.type = "button";
+add_img_btn.value = "Add Image";
+add_img_btn.style.marginRight = "100px";
+add_img_btn.addEventListener('click', function() {
+  if (!document.querySelector("#js_image")) {
+    let img = document.createElement('img');
+    let width = document.querySelector("#width").value;
+    let height = document.querySelector("#height").value;
+    img.src = "./images/homer.jpg";
+    img.id = "js_image"
+
+    img.style.width = `${width - 4}px`;
+    img.style.height = `${height - 4}px`;
+    img.padding = "4px";
+    img.style.position = 'absolute';
+    img.style.left = "50%";
+    img.style.top = `${parseFloat(window.getComputedStyle(theDiv).marginTop) + 2}px`;
+    img.style.transform = `translate(-50%, 0)`;
+
+    document.querySelector("#result-container").appendChild(img);
+  }
+})
+
+
+const rm_img_btn = document.createElement("input");
+rm_img_btn.type = "button";
+rm_img_btn.value = "Remove Image";
+rm_img_btn.addEventListener('click', function() {
+  if (document.querySelector("#js_image")) {
+    document.querySelector("#result-container").removeChild(
+      document.querySelector("#js_image")
+    );
+  }
+});
+
+{
+  let col = document.querySelector(".column");
+  let row = document.createElement("div");
+  row.classList.add("row");
+  row.innerHTML = '<h2>Homer\'s Portrait</h2>\
+                   <div class="subrow"></div>';
+  // let c1 = document.createElement()
+  row.lastChild.appendChild(add_img_btn);
+  row.lastChild.appendChild(rm_img_btn);
+
+  col.appendChild(row);
+}
+
+function updateImage() {
+  let img = document.querySelector('#js_image');
+  if (img) {
+    let width = document.querySelector("#width").value;
+    let height = document.querySelector("#height").value;
+
+    img.style.width = `${width - 4}px`;
+    img.style.height = `${height - 4}px`;
+    }
+}
