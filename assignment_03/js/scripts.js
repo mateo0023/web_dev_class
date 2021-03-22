@@ -97,7 +97,7 @@ add_img_btn.addEventListener('click', function() {
     img.style.width = `${width - 4}px`;
     img.style.height = `${height - 4}px`;
 
-    img.style.top = `${parseFloat(window.getComputedStyle(theDiv).marginTop) + 2}px`;
+    img.style.top = `${parseFloat(window.getComputedStyle(theDiv).marginTop) + 4}px`;
 
     document.querySelector("#result-container").appendChild(img);
   }
