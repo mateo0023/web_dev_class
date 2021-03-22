@@ -75,25 +75,29 @@ border_btn.addEventListener('click', function() {
   theDiv.style.border = `${thick}px ${style} ${color}`;
 })
 
+const img = document.createElement('img');
+img.src = "./images/homer.jpg";
+img.id = "js_image"
+img.padding = "4px";
+img.style.position = 'absolute';
+img.style.left = "50%";
+img.style.transform = `translate(-50%, 0)`;
+
 const add_img_btn = document.createElement("input");
 add_img_btn.type = "button";
 add_img_btn.value = "Add Image";
 add_img_btn.style.marginRight = "100px";
+
+
 add_img_btn.addEventListener('click', function() {
   if (!document.querySelector("#js_image")) {
-    let img = document.createElement('img');
     let width = document.querySelector("#width").value;
     let height = document.querySelector("#height").value;
-    img.src = "./images/homer.jpg";
-    img.id = "js_image"
 
     img.style.width = `${width - 4}px`;
     img.style.height = `${height - 4}px`;
-    img.padding = "4px";
-    img.style.position = 'absolute';
-    img.style.left = "50%";
+
     img.style.top = `${parseFloat(window.getComputedStyle(theDiv).marginTop) + 2}px`;
-    img.style.transform = `translate(-50%, 0)`;
 
     document.querySelector("#result-container").appendChild(img);
   }
@@ -105,9 +109,7 @@ rm_img_btn.type = "button";
 rm_img_btn.value = "Remove Image";
 rm_img_btn.addEventListener('click', function() {
   if (document.querySelector("#js_image")) {
-    document.querySelector("#result-container").removeChild(
-      document.querySelector("#js_image")
-    );
+    document.querySelector("#result-container").removeChild(img);
   }
 });
 
@@ -132,5 +134,5 @@ function updateImage() {
 
     img.style.width = `${width - 4}px`;
     img.style.height = `${height - 4}px`;
-    }
+  }
 }
