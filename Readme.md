@@ -465,6 +465,32 @@ Head here for [HTML](#Forms)
 
 You can add an event listener to the Submit button or when the values are changed.
 
+## JSON
+
+JSON is a JavaScript object notation. An object written in text.
+
+```json
+{
+    "property": "value",
+    "sub-object": {
+	    "property": "value",
+        "p2": "v2"
+    },
+    "list": [
+        {
+            "itemNum": "0",
+            "name": "val1"
+        },
+        {
+            "itemNum": "1",
+            "name": "val3"
+        }
+    ]
+}
+```
+
+
+
 # Server/Connections
 
 Since servers just listen to and execute HTTP Requests, they aren't tied to a specific programming language. They just need to be able to read the HTTP protocol requests. So it is basically: get request + data **and** move/get data accordingly.
@@ -541,3 +567,6 @@ It contains:
 
 5. Body/payload
 
+## Express
+
+[Express](https://expressjs.com/) is a web framework for [Node.js](https://nodejs.org/en/).
