@@ -97,7 +97,9 @@ add_img_btn.addEventListener('click', function() {
     img.style.width = `${width - 4}px`;
     img.style.height = `${height - 4}px`;
 
-    img.style.top = `${parseFloat(window.getComputedStyle(theDiv).marginTop) + 4}px`;
+    // Gets the computed (actual) top margin of the resulting div and moves it down
+    //  2px further
+    img.style.top = `${parseFloat(window.getComputedStyle(theDiv).marginTop) + 2}px`;
 
     document.querySelector("#result-container").appendChild(img);
   }
@@ -113,13 +115,12 @@ rm_img_btn.addEventListener('click', function() {
   }
 });
 
-{
+{// Setup the two buttons without affecting the interpreter a lot
   let col = document.querySelector(".column");
   let row = document.createElement("div");
   row.classList.add("row");
   row.innerHTML = '<h2>Homer\'s Portrait</h2>\
                    <div class="subrow"></div>';
-  // let c1 = document.createElement()
   row.lastChild.appendChild(add_img_btn);
   row.lastChild.appendChild(rm_img_btn);
 
