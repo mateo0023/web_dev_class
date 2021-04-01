@@ -1,44 +1,77 @@
 const form = document.querySelector("#main-form");
+const output = document.querySelector("#output");
 
 form.addEventListener("submit", (ev) => {
-    if (validate(ev)) {
-        // Perform the changes to the output.
-        ev.preventDefault();
-    } else {
+    if (validate(ev.target)) {
+        // Get the name of the favourite dog race
+        let fav_dog = formItems['topdog'].children[formItems['topdog'].value].innerHTML
+        let gender = document.querySelector("#genders :checked").nextSibling.textContent
+
+        output.innerHTML = `<p>
+        Your name is ${formItems["name"].value}<br>
+        Your username is ${formItems["username"].value}<br>
+        Your password has ${formItems["password"].value.length} characters<br>
+        Your age is ${formItems["age"].value}<br>
+        Your bio: <i>${formItems['bio'].value}</i><br>
+        Your gender is ${gender}<br>
+        ${
+            // Pretty self explanatory
+            formItems['topdog'].value !== '0' ?
+                `Your favorite dog breed is ${fav_dog}`
+                : "You don't like dogs"
+            }
+        </p>`
     }
+    else
+        output.innerHTML = "Form reset after failed submission"
+
+
+    ev.preventDefault();
 })
 
 const formItems = form.elements;
 
-const name = formItems["name"];
-const username = formItems["username"];
-const password = formItems["password"];
-const age = formItems["age"];
-const bio = formItems["bio"];
-const udogs = formItems["udogs"];
-const topdog = formItems["topdog"];
+// Set the HTML rules for form validation
+formItems["name"].required = "true";
+formItems["name"].pattern = "[A-Z].*";
+formItems["name"].title = "Must begin with an uppercase letter";
+formItems["username"].required = "true";
+formItems["username"].pattern = ".{5,}"
+formItems["username"].title = "The username must be at least 5 characters";
+formItems["password"].required = "true";
+formItems["password"].pattern = ".{6,}";
+formItems["password"].title = "The password must be at least 6 characters";
+formItems["age"].required = "true";
+formItems["age"].min = 1;
+formItems["bio"].required = "true";
+formItems["topdog"].required = "true";
 
-name.required = "true";
-username.required = "true";
-username.min = 5;
-password.required = "true";
-password.min = 6;
-age.required = "true";
-age.min = 1;
-bio.required = "true";
-topdog.required = "true";
+formItems["bio"].addEventListener('input', checkBio);
 
 // Will perform all the checks
 // and return wether the form validated or not
-function validate(event) {
-    const form = event.target;
-    if (form["name"].value[0] !== form["name"].value[0])
+function validate(form) {
+    // textarea don't support pattern matching
+    if (!checkBio())
         return false;
+
+    // Check the dog situation
+    if (!form["udogs"].checked && form['topdog'].value !== "0")
+        return false;
+    return true
+}
+
+// Set the error messages return wether there's an error or not
+function checkBio() {
     if (!
         (form['bio'].value.toLowerCase().includes('fsu')
             ||
-            form['bio'].value.toLowerCase().includes('florida state')))
+            form['bio'].value.toLowerCase().includes('florida state'))) {
+        formItems['bio'].setCustomValidity("It must include either FSU or Florida State");
         return false;
-    if (!form["udogs"].checked && form['topdog'].value !== "0")
-        return false;
+    }
+    else {
+        formItems['bio'].setCustomValidity("");
+        return true;
+    }
 }
