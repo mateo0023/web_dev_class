@@ -463,7 +463,7 @@ There are [multiple subclasses](https://developer.mozilla.org/en-US/docs/Web/Eve
 
 Head here for [HTML](#Forms)
 
-You can add an event listener to the Submit button or when the values are changed.
+You can add an event listener to the Submit button or when the values are changed. For a full reference, head over to [MDN](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript)
 
 ## JSON
 
@@ -570,3 +570,23 @@ It contains:
 ## Express
 
 [Express](https://expressjs.com/) is a web framework for [Node.js](https://nodejs.org/en/).
+
+```javascript
+const express = require('express')
+const app = express();
+
+// Setting up a GET handler (for a specific address)
+app.get('/address', (req, res) => {
+    // Do something here with the result.
+})
+
+// Default handler
+app.get('*', (req, res) => {
+    // Depends on the application, generally a 404
+    res.send("404 - Subdomain does not exist");
+})
+```
+
+## Flask
+
+Flask is a web framework API for Python.
