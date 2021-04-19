@@ -576,8 +576,15 @@ It contains:
 const express = require('express')
 const app = express();
 
+// This line configures express in order to use all the files in the public
+// folder as the files that compose the web page
+app.use(express.static('/public'));
+
 // Setting up a GET handler (for a specific address)
-app.get('/address', (req, res) => {
+app.get('/address/:data', (req, res) => {
+    # Here it gets the value of :data
+    const data = req.params.data
+    
     // Do something here with the result.
 })
 
@@ -586,8 +593,177 @@ app.get('*', (req, res) => {
     // Depends on the application, generally a 404
     res.send("404 - Subdomain does not exist");
 })
+
+app.post('/upload-file', (req, res) => { ... })
+
+// Return the connection
+const server = app.listen(portNumber, afterFunction)
 ```
+
+### Form Handling
+
+Forms are inside the `req.query`.
+
+```html
+<form action="/my_form" method="get">
+    <input name="first_name" type="text"/>
+    <input name="last_name" type="text"/>
+    <input name="dob" type="date"/>
+    <input type="submit" value="Submit the form"/>
+</form>
+```
+
+```javascript
+app.get('/my_form', (req, res) => {
+	// All the form by names
+	const {
+        first_name,
+        last_name,
+        dob,
+    } = req.query;
+})
+```
+
+### Templates - EJS
+
+There are multiple template offerings for Express.js, one of them is [EJS](https://www.npmjs.com/package/ejs).
+
+```ejs
+<!-- dashboard.ejs -->
+
+<% if (userName) { %>
+  <h2><%= userName %></h2>
+<% } %>
+<img src="<%= (userImage) ? userImage : "/imgs/defaultImage.jpg" %>" width="20" height="20">
+```
+
+
+
+```javascript
+const express = require("express");
+const app = express();
+
+
+// Setting view engine to ejs
+app.set("view engine", "ejs");
+
+app.get('/', (req, res) => {
+    // Process req and get data
+    const user_name = userData.name;
+    const user_img = userData.image;
+    
+    // Send the rendered HTML
+    res.render("dashboard.ejs", {userName: user_name, userImage: user_img})
+})
+```
+
+
 
 ## Flask
 
-Flask is a web framework API for Python.
+[Flask](https://palletsprojects.com/p/flask/) is a web framework API for Python.
+
+```python
+from Flask import Flask, request, jsonify , send_from_directory
+import json
+
+# Makes the app, using the '/static' path as the "/public" in Express.js
+app = Flask(__name__, static_url_path='/static')
+
+if __name__ == '__main__':
+    # By default it starts at 127.0.0.1:5000
+	app.run()
+    
+@app.route('/address/<var:var>')
+def send_index(var):
+    request # This is the request object
+    print(var)
+    
+    # Send the index file from ./static
+    
+    # Returns the actual data, a string, file or object
+	return app.send_static_file('index.html')
+
+```
+
+### Form Processing
+
+```python
+# Will get triggered for GET and POST
+# Default is just GET
+@app.route('/form', methods=['GET', 'POST'])
+def cool_form_fandler():
+    if request.method == "GET":
+        data = {
+            "first_name": request.args.get("first_name"),
+            "last_name": request.args.get("last_name"),
+            "dob": request.args.get("dob"),
+            "message": "You sent this form with a GET request"
+        }
+        # Creates a JSON from the dictionary
+        return jsonify(data)
+    else:
+        # Dictionary from JSON
+        data = json(request.data)
+        response = {
+            "first_name": data["first_name"],
+            "last_name": data["last_name"],
+            "dob": data["dob"],
+            "message": "You sent this form with a POST request"
+        }
+    	return jsonify(response)
+```
+
+### Template - [Jinja2](https://jinja.palletsprojects.com/en/2.11.x/)
+
+It comes with `pip install Flask`
+
+#### Syntax
+
+* **<u>Inline</u>:** `{{ var }}` will leave the value of `var` inline.
+
+* **<u>Block</u>:** `{% if %} ... {% endif %}`
+
+* **<u>Data</u>:** you can pass variables to the template as optional arguments in the `render` function.
+
+  *For example*: `render_template('file.jtml', foo=31)` will make `foo` have a value of 31 inside `file.html`
+
+* **<u>Filters</u>:** Jinja2 has built-in [filters](https://jinja.palletsprojects.com/en/2.11.x/templates/#builtin-filters) with the syntax `foo|filter`. These filters are used for formatting. For example `messages|length` is equivalent to `len(messages)`
+
+#### Example
+
+```jinja2
+<!-- dashboard.html -->
+
+<body>
+	<h2 >Hello {{ name }}</h2>
+	{% if messages|length == 0 %} 
+		<p> There are no messages </p>
+	{% else %}
+        {% for i in range(messages|length) %}
+        	<p> {{ messages[i] }} </p>
+        {% endfor %}
+	{% endif %}
+</body>
+```
+
+```python
+@app.route('/home', methods=['GET'])
+def make_home:
+    username = getUser( ... )
+    data = getUserData( ... )
+    
+	return render_template('dashboard.html', name=username, messages=data)
+```
+
+
+
+## PHP
+
+Server-side processing language.
+
+1. You need to install a webserver, commonly [Apache](https://httpd.apache.org/)
+2. Add PHP to the system ([instructions](https://www.php.net/manual/en/install.php))
+
+**Alternatively**, you can download [XAMPP (cross-platform)](https://www.apachefriends.org/download.html) or LAMPP (Linux) which is a one-stop solution for PHP.
+
