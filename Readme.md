@@ -10,7 +10,7 @@ This is my notes and assignments for an introductory web development class.
 2. [HTML](#HTML)
 3. [CSS](#CSS)
 4. [JavaScript](#JavaScript)
-5. [Server/Connections](#Server/Connections)
+5. [Servers](#Servers)
 
 ## Elements of the Web Network
 
@@ -492,7 +492,7 @@ JSON is a JavaScript object notation. An object written in text.
 
 
 
-# Server/Connections
+# Servers
 
 Since servers just listen to and execute HTTP Requests, they aren't tied to a specific programming language. They just need to be able to read the HTTP protocol requests. So it is basically: get request + data **and** move/get data accordingly.
 
@@ -509,6 +509,20 @@ What they must do:
 9. Back to 1
 
 Since all of these steps are standard (except 5), there are Web Frameworks in multiple programming languages. Meaning that as a back-end developer you generally just need to implement step 5 and other processes that you might need.
+
+**Separate resources. Don't give the entire functionality of a resource across the server. Create a module and share some of its functions**
+
+```javascript
+const db = // Some database
+ 
+// They won't have access to the db instance.
+module.exports = {
+    addUser: (data) => {
+        // Validate data
+        // Do something with the data.
+    }
+}
+```
 
 ## HTTP Request
 
