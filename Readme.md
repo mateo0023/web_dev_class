@@ -7,6 +7,7 @@ This is my notes and assignments for an introductory web development class.
    2. [FSU Homepage](https://mateo0023.github.io/web_dev_class/assignment_02)
    3. [Simple Style Changes w JS](https://mateo0023.github.io/web_dev_class/assignment_03)
    4. [Form Validation (using built-in functionality)](https://mateo0023.github.io/web_dev_class/assignment_04)
+   5. [Final Project](https://github.com/mateo0023/NimbusNine)
 2. [HTML](#HTML)
 3. [CSS](#CSS)
 4. [JavaScript](#JavaScript)
